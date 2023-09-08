@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
 
 /*
 Nel progetto csharp-oop-shop, creare la classe Prodotto che gestisce i prodotti di uno shop.
@@ -19,3 +19,12 @@ i metodi getter e setter ed eventuali altri metodi di “utilità” per fare in
 -Il prodotto esponga un metodo per avere il nome esteso, ottenuto concatenando codice + nome
 -Testate poi i vostri oggetti Prodotto, istanziandoli e provando ad interagirci per testare tutti i metodi che avete previsto.
 */
+
+using csharp_oop_shop;
+
+Prodotto prodotto1 = new Prodotto(34, "Spazzolino elettrico","", 24.5f, 22  );
+
+Console.WriteLine($"Prodotto1: {prodotto1.nome}");
+prodotto1.LeggiPrezzo();
+prodotto1.LeggiPrezzoIvato();
+prodotto1.LeggiCodiceNome();
