@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace csharp_oop_shop
 {
     public class Prodotto
     {
         // ATTRIBUTI
-        public uint codice {  get; private set; }
+        public int codice {  get; private set; }
         public string nome { get; set; }
         public string descrizione { get;  set; }
         public float prezzo { get; set; }
@@ -20,7 +22,7 @@ namespace csharp_oop_shop
 
 
         // COSTRUTTORI
-        public Prodotto(uint num, string nome, string desc, float prezzo, int iva)
+        public Prodotto(int num, string nome, string desc, float prezzo, int iva)
         {
             this.codice = num;
             this.nome = nome;
@@ -42,11 +44,19 @@ namespace csharp_oop_shop
             float prezzoIvato = this.prezzo * this.iva / 100;
             Console.WriteLine($"Il prezzo più iva di questo prodotto è di {prezzoIvato}");
         }
+  
 
-        public void LeggiCodiceNome () 
+        public void LeggiCodiceNome()
         {
-            string nomeCompleto = this.codice +" - "+ this.nome;
+            // Formatta il tipo int in string e ne aggiunge gli zeri a seinistra  se necessario.
+            string codiceFormattato = this.codice.ToString("D8");
+
+            string nomeCompleto = "[" + codiceFormattato +"] "  + this.nome;
+
             Console.WriteLine($"Il nome completo del tuo prodotto è {nomeCompleto}");
         }
+
+
+
     }
 }
