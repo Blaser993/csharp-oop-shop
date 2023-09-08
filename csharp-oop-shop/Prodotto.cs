@@ -56,7 +56,10 @@ namespace csharp_oop_shop
             Console.WriteLine($"Il nome completo del tuo prodotto è {nomeCompleto}");
         }
 
+        public void SchedaProdotto()
+        {
 
+        }
 
     }
 }

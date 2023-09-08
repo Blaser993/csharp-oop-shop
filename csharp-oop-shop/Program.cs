@@ -23,6 +23,10 @@ i metodi getter e setter ed eventuali altri metodi di “utilità” per fare in
 using csharp_oop_shop;
 
 Prodotto prodotto1 = new Prodotto(34, "Spazzolino elettrico","", 24.5f, 22  );
+Prodotto prodotto2 = new Prodotto(5356, "Dentifricio", "", 0.99f, 22);
+Prodotto prodotto3 = new Prodotto(36604, "Cibo per cani", "", 40f, 22);
+Prodotto prodotto4 = new Prodotto(3004, "Assorbenti", "", 12.9f, 0);
+Prodotto prodotto5 = new Prodotto(11111, "Mazza da golf", "", 124.66f, 22);
 
 Console.WriteLine($"Prodotto1: {prodotto1.nome}");
 prodotto1.LeggiPrezzo();
@@ -37,3 +41,22 @@ Usando un array fisso di 5 prodotti, dichiarate un elenco dei prodotti di un neg
 e inseriteci al suo interno qualche prodotto che vi aspettate di trovare nel negozio. 
 Stampate poi l’elenco dei vostri prodotti che avete previsto nel negozio. 
  */
+
+Prodotto[] negozio = {prodotto1, prodotto2, prodotto3, prodotto4, prodotto5 };
+
+Console.WriteLine($"All'interno del negozio ci sono i seguenti prodotti: ");
+
+
+for (int i = 0; i < negozio.Length; i++)
+{
+    Console.WriteLine($"Nome del prodotto {i+1} è: {negozio[i].nome}");
+}
+
+/*
+
+for (int i = 0; i < negozio.Length; i++)
+{
+    negozio[i].LeggiCodiceNome();
+}  
+
+*/
