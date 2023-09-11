@@ -53,10 +53,10 @@ namespace csharp_oop_shop
 
         public void LeggiCodiceNome()
         {
-            // Formatta il tipo int in string e ne aggiunge gli zeri a seinistra  se necessario.
-            string codiceFormattato = this.Codice.ToString("D8");
+        
+            string codiceFormattato = this.Codice.ToString().PadLeft(8, '0');
 
-            string nomeCompleto = "[" + codiceFormattato + "]" + this.Nome;
+            string nomeCompleto = "[" + codiceFormattato + "] " + this.Nome;
 
             Console.WriteLine($"{nomeCompleto}");
         }

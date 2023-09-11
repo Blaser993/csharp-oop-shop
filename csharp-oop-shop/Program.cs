@@ -47,17 +47,10 @@ Prodotto[] negozio = {prodotto1, prodotto2, prodotto3, prodotto4, prodotto5 };
 Console.WriteLine($"All'interno del negozio ci sono i seguenti prodotti: ");
 
 
-/*for (int i = 0; i < negozio.Length; i++)
-{
-    string nomeCompleto = negozio[i].LeggiCodiceNome();
-    Console.WriteLine($"Nome del prodotto {i+1} è: {negozio[i].Nome}");
-}
-
-*/
 
 for (int i = 0; i < negozio.Length; i++)
 {
-    Console.Write($"Nome del prodotto {i + 1} è: ");
+    Console.Write($"Il nome completo del prodotto {i + 1} è: ");
     negozio[i].LeggiCodiceNome();
 }  
 
